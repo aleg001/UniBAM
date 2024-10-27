@@ -1,61 +1,82 @@
-# UniBAM
+# Vue3 + Nuxt3 + Radix + Tailwind + TypeScript + ESlint + Stylelint + Prettier Template
 
-This template should help get you started developing with Vue 3 in Vite.
+# Vue3 Nuxt3 Radix Tailwind Boilerplate (vue3-nuxt3-radix-tailwind-boilerplate)
+
+![Vue3 + Nuxt3 + TypeScript + ESlint + Stylelint + Prettier Template](./public/vue3-nuxt3-radix-tailwind-boilerplate.png)
+
+
+## Table of Contents
+- [Recommended IDE Setup](#recommended-ide-setup)
+- [About this project](#about-this-project)
+- [Prerequisites](#prerequisites)
 
 ## Recommended IDE Setup
+- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+- [WebStorm](https://www.jetbrains.com/webstorm/) + [Copilot](https://plugins.jetbrains.com/plugin/17718-github-copilot)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## About this project 
+<p>This template includes the following packages:</p>
 
-## Type Support for `.vue` Imports in TS
+- [Vue 3](https://vuejs.org/) - The Progressive JavaScript Framework.
+- [Nuxt 3](https://nuxt.com/) - The Intuitive Web Framework
+- [Radix UI](https://www.radix-ui.com/) - An open source component library optimized for fast development, easy maintenance, and accessibility. Just import and go—no configuration required.
+- [Tailwind CSS](https://tailwindcss.com/) - Rapidly build modern websites without ever leaving your HTML.
+- [TypeScript](https://www.typescriptlang.org/) - TypeScript extends JavaScript by adding types.
+- [Pinia](https://pinia.vuejs.org/)- The Vue Store that you will enjoy using
+- [Vue I18n](https://vue-i18n.intlify.dev/) - Vue I18n is internationalization plugin for Vue.js
+- [Dayjs](https://day.js.org/) - Fast 2kB alternative to Moment.js with the same modern API
+- [ESLint](https://eslint.org/) - Find and fix problems in your JavaScript code
+- [Stylelint](https://stylelint.io/) - A mighty, modern linter that helps you avoid errors and enforce conventions in your styles.
+- [Prettier](https://prettier.io/) - A code formatter.
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## Prerequisites
 
-## Customize configuration
+- [npm](https://www.npmjs.com/get-npm)
+- [Node.js](https://nodejs.org/en/download/)
+- [pnpm](https://pnpm.io/)
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+This Demo project is running on Node.js (20.*.*) while testing.
 
-## Project Setup
+## Clone / Download
+1. Clone this repository to your local machine
+2. Start your development :)
 
-```sh
-npm install
+```
+$ git clone https://github.com/idimetrix/vue3-nuxt3-radix-tailwind-boilerplate.git
 ```
 
-### Compile and Hot-Reload for Development
+## Related Scripts
 
-```sh
-npm run dev
+**1. Enter the project folder**
+```
+> Open a new terminal window and enter the folder
+$ cd <project folder>
+```
+**2. Install packages via yarn**
+```
+$ yarn install
+```
+**3. Compiles for development**
+```
+$ npm run dev // port:3000
+```
+**4. Fix the coding style automatically ( js / html )**
+```
+$ npm run lint-fix
+```
+**5. Check the css coding style**
+```
+$ npm run css-check
 ```
 
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
+**6. Fix the css coding style automatically**
+```
+$ npm run css-fix
 ```
 
-### Run Headed Component Tests with [Cypress Component Testing](https://on.cypress.io/component)
-
-```sh
-npm run test:unit:dev # or `npm run test:unit` for headless testing
+**7. Locally preview production build**
 ```
-
-### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
-
-```sh
-npm run test:e2e:dev
+npm run preview
 ```
-
-This runs the end-to-end tests against the Vite development server.
-It is much faster than the production build.
-
-But it's still recommended to test the production build with `test:e2e` before deploying (e.g. in CI environments):
-
-```sh
-npm run build
-npm run test:e2e
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+## Dmitrii Selikhov
+- [ Dmitrii Selikhov](https://github.com/idimetrix)
