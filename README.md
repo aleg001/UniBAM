@@ -10,13 +10,7 @@ El proyecto está construido utilizando tecnologías frontend modernas, como Vue
 
 - **[Vue 3](https://vuejs.org/)**: Vue 3 es un framework progresivo de JavaScript para construir interfaces de usuario. En este proyecto se utiliza como el framework principal para la construcción de componentes y la gestión del estado de la aplicación.
   
-- **[Nuxt 3](https://nuxt.com/)**: Nuxt es un framework intuitivo y de alto rendimiento basado en Vue.js. Proporciona características potentes como el renderizado del lado del servidor (SSR) y la generación de sitios estáticos (SSG), con una estructura modular que facilita el escalado y mantenimiento de aplicaciones grandes.
-
-- **[Radix UI](https://www.radix-ui.com/)**: Radix UI es una librería de componentes accesibles y sin estilos predefinidos que te permite crear diseños flexibles y personalizados. Se eligió por su simplicidad y enfoque en la accesibilidad desde el primer momento.
-
 - **[Tailwind CSS](https://tailwindcss.com/)**: Tailwind CSS es un framework de utilidades CSS que permite desarrollar interfaces modernas rápidamente sin necesidad de abandonar el archivo HTML. Facilita la personalización de los diseños con facilidad y mantiene el tamaño del archivo CSS reducido.
-
-- **[TypeScript](https://www.typescriptlang.org/)**: TypeScript agrega seguridad de tipos a JavaScript, lo que hace que el código sea más robusto, mantenible y fácil de refactorizar. Ayuda a prevenir errores comunes de codificación y proporciona un mejor soporte en los entornos de desarrollo (IDE).
 
 - **[Pinia](https://pinia.vuejs.org/)**: Pinia es la librería para la gestión de estado en este proyecto. Es una versión mejorada de Vuex, ofreciendo una API más sencilla y poderosa.
 
@@ -30,26 +24,7 @@ El proyecto está construido utilizando tecnologías frontend modernas, como Vue
 
 - **[Prettier](https://prettier.io/)**: Prettier es un formateador de código que asegura un estilo consistente en todo el proyecto, mejorando la legibilidad y el mantenimiento.
 
-## Estructura del Proyecto
 
-```bash
-UniBAM/
-├── assets/             # Archivos estáticos como imágenes y fuentes
-├── components/         # Componentes de Vue para la aplicación
-├── layouts/            # Layouts de la aplicación (cabeceras, pies de página, etc.)
-├── pages/              # Páginas de la aplicación
-├── plugins/            # Plugins de Vue (e.g., Pinia, I18n)
-├── public/             # Archivos estáticos públicos
-├── store/              # Gestión de estado con Pinia
-├── styles/             # Estilos globales y configuración de Tailwind
-├── types/              # Tipos para TypeScript
-├── utils/              # Funciones utilitarias y helpers
-├── .eslintrc.js        # Configuración de ESLint
-├── .stylelintrc.json   # Configuración de Stylelint
-├── nuxt.config.ts      # Configuración de Nuxt 3
-└── package.json        # Dependencias del proyecto y scripts
-
-```
 
 ## Configuración del Proyecto
 

@@ -1,20 +1,22 @@
 <template>
-  <div class="min-h-screen bg-blanco flex items-center justify-center">
+  <div
+    class="min-h-screen bg-blanco flex items-center justify-center relative overflow-hidden"
+  >
     <div
       class="relative w-full max-w-md mx-auto p-8 bg-white shadow-lg rounded-lg md:max-w-none md:w-full"
     >
       <!-- Header -->
       <h1 class="text-2xl sm:text-3xl font-bold text-negro text-center mb-2">
-        Crea tu cuenta
+        Inicia sesión
       </h1>
 
-      <!-- Animated Lines -->
       <div class="inset-0 -z-10 flex flex-col justify-between mb-5">
         <div ref="line1" class="h-1 bg-amarillo-macondo"></div>
         <div ref="line2" class="h-1 bg-naranja-alba"></div>
         <div ref="line3" class="h-1 bg-verde-andino"></div>
         <div ref="line4" class="h-1 bg-rosa-flamenco"></div>
       </div>
+
       <!-- Back Button -->
       <button
         class="text-negro left-4 top-4 focus:outline-none"
@@ -35,30 +37,11 @@
           />
         </svg>
       </button>
-      <p class="text-gray-500 text-center mb-6">Se parte de la experiencia</p>
+
+      <p class="text-gray-500 text-center mb-6">Accede a tu cuenta</p>
 
       <!-- Form -->
       <form @submit.prevent="handleSubmit" class="space-y-4">
-        <!-- First Name Field -->
-        <div>
-          <input
-            type="text"
-            placeholder="Tu nombre"
-            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-verde-andino focus:ring-verde-andino focus:outline-none"
-            v-model="firstName"
-          />
-        </div>
-
-        <!-- Last Name Field -->
-        <div>
-          <input
-            type="text"
-            placeholder="Tu apellido"
-            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-verde-andino focus:ring-verde-andino focus:outline-none"
-            v-model="lastName"
-          />
-        </div>
-
         <!-- Email Field -->
         <div>
           <input
@@ -80,19 +63,18 @@
         </div>
 
         <!-- Submit Button -->
-
         <button
           type="submit"
           class="w-full bg-black text-white py-3 rounded-lg shadow-md font-medium hover:bg-gray-900 transition-all"
         >
-          Registrarse
+          Ingresar
         </button>
       </form>
 
       <!-- Footer -->
       <div class="mt-6 text-center">
-        <a href="/login" class="text-negro hover:underline font-medium"
-          >¿Tienes cuenta?</a
+        <a href="/register" class="text-negro hover:underline font-medium"
+          >¿No tienes cuenta?</a
         >
       </div>
     </div>
@@ -101,18 +83,12 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import { useUserStore } from '@/stores/user' // Import Pinia store
 import { gsap } from 'gsap'
 import { useRouter } from 'vue-router' // Use router to navigate back
 
 // Create refs for form fields
-const firstName = ref('')
-const lastName = ref('')
 const email = ref('')
 const password = ref('')
-
-// Access the Pinia store
-const userStore = useUserStore()
 
 // Use router to navigate
 const router = useRouter()
@@ -125,13 +101,12 @@ const line4 = ref(null)
 
 // Handle form submission
 const handleSubmit = () => {
-  // Save first name and last name in Pinia store
-  userStore.setUser(firstName.value, lastName.value)
+  // Log the data to show user input (you can modify this for your needs)
   console.log('Form submitted:', {
-    firstName: firstName.value,
-    lastName: lastName.value,
+    email: email.value,
+    password: password.value,
   })
-  router.push('/login')
+  router.push('/main')
 }
 
 // Navigate back function
@@ -141,31 +116,56 @@ const goBack = () => {
 
 // GSAP Animation for lines
 onMounted(() => {
-  gsap.fromTo(
-    line1.value,
-    { width: '0%' },
-    { width: '100%', duration: 1.5, ease: 'power3.inOut', delay: 0 }
-  )
-  gsap.fromTo(
-    line2.value,
-    { width: '0%' },
-    { width: '100%', duration: 1.5, ease: 'power3.inOut', delay: 0.2 }
-  )
-  gsap.fromTo(
-    line3.value,
-    { width: '0%' },
-    { width: '100%', duration: 1.5, ease: 'power3.inOut', delay: 0.4 }
-  )
-  gsap.fromTo(
-    line4.value,
-    { width: '0%' },
-    { width: '100%', duration: 1.5, ease: 'power3.inOut', delay: 0.6 }
-  )
+  const timeline = gsap.timeline()
+  timeline
+    .fromTo(
+      line1.value,
+      { scaleX: 0 },
+      {
+        scaleX: 1,
+        transformOrigin: 'left',
+        duration: 1.2,
+        ease: 'power3.inOut',
+      }
+    )
+    .fromTo(
+      line2.value,
+      { scaleX: 0 },
+      {
+        scaleX: 1,
+        transformOrigin: 'left',
+        duration: 1.2,
+        ease: 'power3.inOut',
+      },
+      '-=1.0'
+    )
+    .fromTo(
+      line3.value,
+      { scaleX: 0 },
+      {
+        scaleX: 1,
+        transformOrigin: 'left',
+        duration: 1.2,
+        ease: 'power3.inOut',
+      },
+      '-=1.0'
+    )
+    .fromTo(
+      line4.value,
+      { scaleX: 0 },
+      {
+        scaleX: 1,
+        transformOrigin: 'left',
+        duration: 1.2,
+        ease: 'power3.inOut',
+      },
+      '-=1.0'
+    )
 })
 </script>
 
 <style scoped>
-/* Background lines styling */
+/* Ensuring the background lines are properly placed and animated */
 .absolute {
   top: 0;
   left: 0;
@@ -174,6 +174,11 @@ onMounted(() => {
 
 h1 {
   color: #171717; /* Negro color */
+}
+
+div[h-1] {
+  transform-origin: left;
+  transform: scaleX(0);
 }
 
 /* Responsive styling for mobile and desktop */

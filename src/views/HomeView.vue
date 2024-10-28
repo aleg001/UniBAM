@@ -28,7 +28,7 @@
       <!-- CTA Buttons -->
       <div ref="ctaButtons" class="space-y-4 mt-12">
         <a
-          href="/login"
+          href="/register"
           class="block w-full max-w-xs mx-auto bg-yellow-400 text-black py-3 rounded-lg shadow-md text-lg font-medium hover:bg-yellow-500 transition-all"
         >
           Ingresar
