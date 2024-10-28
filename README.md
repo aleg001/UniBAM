@@ -1,82 +1,93 @@
-# Vue3 + Nuxt3 + Radix + Tailwind + TypeScript + ESlint + Stylelint + Prettier Template
+# UniBAM Landing Page
 
-# Vue3 Nuxt3 Radix Tailwind Boilerplate (vue3-nuxt3-radix-tailwind-boilerplate)
+## Descripción del Proyecto
 
-![Vue3 + Nuxt3 + TypeScript + ESlint + Stylelint + Prettier Template](./public/vue3-nuxt3-radix-tailwind-boilerplate.png)
+UniBAM es una aplicación web optimizada para dispositivos móviles desarrollada para el banco BAM, cuyo objetivo es captar la atención de los clientes jóvenes y estudiantes universitarios. El principal objetivo del proyecto es aumentar la fidelización de los clientes ofreciendo productos y beneficios personalizados, alineados con las necesidades e intereses de los jóvenes. Esta landing page actúa como un prototipo que presenta las características principales de la aplicación.
+
+El proyecto está construido utilizando tecnologías frontend modernas, como Vue 3, Nuxt 3, Tailwind CSS y TypeScript, lo que garantiza un código mantenible, escalable y optimizado para el rendimiento y la accesibilidad. Está diseñado con una estrategia mobile-first, priorizando la experiencia en dispositivos móviles.
+
+## Tecnologías Utilizadas
+
+- **[Vue 3](https://vuejs.org/)**: Vue 3 es un framework progresivo de JavaScript para construir interfaces de usuario. En este proyecto se utiliza como el framework principal para la construcción de componentes y la gestión del estado de la aplicación.
+  
+- **[Nuxt 3](https://nuxt.com/)**: Nuxt es un framework intuitivo y de alto rendimiento basado en Vue.js. Proporciona características potentes como el renderizado del lado del servidor (SSR) y la generación de sitios estáticos (SSG), con una estructura modular que facilita el escalado y mantenimiento de aplicaciones grandes.
+
+- **[Radix UI](https://www.radix-ui.com/)**: Radix UI es una librería de componentes accesibles y sin estilos predefinidos que te permite crear diseños flexibles y personalizados. Se eligió por su simplicidad y enfoque en la accesibilidad desde el primer momento.
+
+- **[Tailwind CSS](https://tailwindcss.com/)**: Tailwind CSS es un framework de utilidades CSS que permite desarrollar interfaces modernas rápidamente sin necesidad de abandonar el archivo HTML. Facilita la personalización de los diseños con facilidad y mantiene el tamaño del archivo CSS reducido.
+
+- **[TypeScript](https://www.typescriptlang.org/)**: TypeScript agrega seguridad de tipos a JavaScript, lo que hace que el código sea más robusto, mantenible y fácil de refactorizar. Ayuda a prevenir errores comunes de codificación y proporciona un mejor soporte en los entornos de desarrollo (IDE).
+
+- **[Pinia](https://pinia.vuejs.org/)**: Pinia es la librería para la gestión de estado en este proyecto. Es una versión mejorada de Vuex, ofreciendo una API más sencilla y poderosa.
+
+- **[Vue I18n](https://vue-i18n.intlify.dev/)**: Este plugin de internacionalización permite soportar múltiples idiomas en la aplicación. Es una característica crítica para UniBAM, ya que busca servir a una audiencia diversa.
+
+- **[Dayjs](https://day.js.org/)**: Dayjs es una alternativa ligera a Moment.js para la manipulación de fechas. Se utiliza para manejar funcionalidades relacionadas con fechas dentro de la aplicación.
+
+- **[ESLint](https://eslint.org/)**: ESLint ayuda a hacer cumplir la calidad del código detectando y corrigiendo problemas en el código JavaScript. Asegura que la base del código se mantenga limpia y consistente.
+
+- **[Stylelint](https://stylelint.io/)**: Este linter ayuda a evitar errores en el CSS y a hacer cumplir las mejores prácticas, garantizando que el código CSS siga convenciones adecuadas.
+
+- **[Prettier](https://prettier.io/)**: Prettier es un formateador de código que asegura un estilo consistente en todo el proyecto, mejorando la legibilidad y el mantenimiento.
+
+## Estructura del Proyecto
+
+```bash
+UniBAM/
+├── assets/             # Archivos estáticos como imágenes y fuentes
+├── components/         # Componentes de Vue para la aplicación
+├── layouts/            # Layouts de la aplicación (cabeceras, pies de página, etc.)
+├── pages/              # Páginas de la aplicación
+├── plugins/            # Plugins de Vue (e.g., Pinia, I18n)
+├── public/             # Archivos estáticos públicos
+├── store/              # Gestión de estado con Pinia
+├── styles/             # Estilos globales y configuración de Tailwind
+├── types/              # Tipos para TypeScript
+├── utils/              # Funciones utilitarias y helpers
+├── .eslintrc.js        # Configuración de ESLint
+├── .stylelintrc.json   # Configuración de Stylelint
+├── nuxt.config.ts      # Configuración de Nuxt 3
+└── package.json        # Dependencias del proyecto y scripts
+
+## Configuración del Proyecto
+
+1. **Entrar al Directorio del Proyecto**  
+   Primero, abre una nueva ventana de terminal y navega al directorio del proyecto:
+
+$ cd <project-folder>
 
 
-## Table of Contents
-- [Recommended IDE Setup](#recommended-ide-setup)
-- [About this project](#about-this-project)
-- [Prerequisites](#prerequisites)
+2. **Instalar Dependencias del Proyecto**  
+Una vez dentro del directorio del proyecto, instala los paquetes necesarios utilizando npm:
 
-## Recommended IDE Setup
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
-- [WebStorm](https://www.jetbrains.com/webstorm/) + [Copilot](https://plugins.jetbrains.com/plugin/17718-github-copilot)
+$ npm install
 
-## About this project 
-<p>This template includes the following packages:</p>
 
-- [Vue 3](https://vuejs.org/) - The Progressive JavaScript Framework.
-- [Nuxt 3](https://nuxt.com/) - The Intuitive Web Framework
-- [Radix UI](https://www.radix-ui.com/) - An open source component library optimized for fast development, easy maintenance, and accessibility. Just import and go—no configuration required.
-- [Tailwind CSS](https://tailwindcss.com/) - Rapidly build modern websites without ever leaving your HTML.
-- [TypeScript](https://www.typescriptlang.org/) - TypeScript extends JavaScript by adding types.
-- [Pinia](https://pinia.vuejs.org/)- The Vue Store that you will enjoy using
-- [Vue I18n](https://vue-i18n.intlify.dev/) - Vue I18n is internationalization plugin for Vue.js
-- [Dayjs](https://day.js.org/) - Fast 2kB alternative to Moment.js with the same modern API
-- [ESLint](https://eslint.org/) - Find and fix problems in your JavaScript code
-- [Stylelint](https://stylelint.io/) - A mighty, modern linter that helps you avoid errors and enforce conventions in your styles.
-- [Prettier](https://prettier.io/) - A code formatter.
+3. **Iniciar el Servidor de Desarrollo**  
+Para iniciar el servidor de desarrollo, ejecuta el siguiente comando. La aplicación estará disponible en `http://localhost:3000` por defecto:
 
-## Prerequisites
+$ npm run dev
 
-- [npm](https://www.npmjs.com/get-npm)
-- [Node.js](https://nodejs.org/en/download/)
-- [pnpm](https://pnpm.io/)
 
-This Demo project is running on Node.js (20.*.*) while testing.
+4. **Lint y Arreglo Automático de Estilo de Código (JavaScript y HTML)**  
+Ejecuta el siguiente script para arreglar automáticamente los problemas de estilo de código en los archivos JavaScript y HTML:
 
-## Clone / Download
-1. Clone this repository to your local machine
-2. Start your development :)
-
-```
-$ git clone https://github.com/idimetrix/vue3-nuxt3-radix-tailwind-boilerplate.git
-```
-
-## Related Scripts
-
-**1. Enter the project folder**
-```
-> Open a new terminal window and enter the folder
-$ cd <project folder>
-```
-**2. Install packages via yarn**
-```
-$ yarn install
-```
-**3. Compiles for development**
-```
-$ npm run dev // port:3000
-```
-**4. Fix the coding style automatically ( js / html )**
-```
 $ npm run lint-fix
-```
-**5. Check the css coding style**
-```
+
+
+5. **Verificación del Estilo de Código CSS**  
+Para verificar el estilo de código CSS y detectar posibles errores, utiliza el siguiente comando:
+
 $ npm run css-check
-```
 
-**6. Fix the css coding style automatically**
-```
+
+6. **Arreglar Automáticamente el Estilo de Código CSS**  
+Si hay problemas con los estilos CSS, puedes arreglarlos automáticamente ejecutando:
+
 $ npm run css-fix
-```
 
-**7. Locally preview production build**
-```
-npm run preview
-```
-## Dmitrii Selikhov
-- [ Dmitrii Selikhov](https://github.com/idimetrix)
+
+7. **Previsualizar la Construcción de Producción Localmente**  
+Para previsualizar localmente la construcción de producción, ejecuta el siguiente comando:
+
+$ npm run preview
