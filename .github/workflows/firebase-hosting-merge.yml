@@ -3,11 +3,12 @@ name: Deploy to Firebase Hosting on merge
 on:
   push:
     branches:
-      - main
+      - main  # Trigger the workflow when pushing to the main branch
 
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
+
     steps:
       # Step 1: Check out the repository
       - name: Checkout repository
@@ -17,21 +18,21 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18' # Specify the version of Node.js you're using
+          node-version: '18'  # Specify the Node.js version
 
       # Step 3: Install dependencies
       - name: Install dependencies
-        run: npm install
+        run: npm install  # Installs the necessary dependencies
 
       # Step 4: Build the Vue app
       - name: Build Vue app
-        run: npm run build
+        run: npm run build  # Builds the production-ready version of your app
 
       # Step 5: Deploy to Firebase Hosting
       - name: Deploy to Firebase Hosting
-        uses: FirebaseExtended/action-hosting-deploy@v0
+        run: firebase deploy --only hosting  # Deploy only to Firebase Hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}  # Use the stored Firebase token
         with:
-          repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }} # replace with the appropriate secret
-          channelId: live
-          projectId: unibam-uvg
+          channelId: live  # Deploy to the live channel
+          projectId: unibam-uvg  # Deploy to the Firebase project "unibam-uvg"
