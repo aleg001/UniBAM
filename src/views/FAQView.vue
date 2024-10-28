@@ -3,14 +3,16 @@
   <div class="min-h-screen bg-white p-4 flex flex-col items-center">
     <!-- Header Section with Image and Title -->
     <div class="text-center mb-8 mt-32">
-      <h1 class="text-4xl font-bold text-negro mb-2">Preguntas Frecuentes</h1>
+      <h1 class="text-2xl md:text-3xl font-bold text-black mb-2">
+        Preguntas Frecuentes
+      </h1>
 
       <p class="text-gray-600 text-lg">Resuelve tus dudas aquí.</p>
 
       <img
         src="../assets/busca.png"
         alt="Persona buscando información"
-        class="mx-auto w-4/6 max-h-32 object-cover mt-5 md:w-full md:h-full md:max-h-full rounded-2xl"
+        class="rounded-3xl mt-4"
       />
     </div>
 
@@ -245,12 +247,14 @@
       </div>
     </div>
   </div>
+  <BottomBar class="md:hidden" />
 </template>
 
 <script setup>
 import { ref } from 'vue'
 import { gsap } from 'gsap'
 import NavBar from '../components/NavBar.vue'
+import BottomBar from '../components/BottomBar.vue'
 
 // State to track which accordion is open
 const accordionIndex = ref(null)

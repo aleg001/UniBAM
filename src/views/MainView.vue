@@ -6,7 +6,7 @@
       <h1 class="text-2xl font-bold text-black md:text-3xl">
         Bienvenido, {{ fullName }}
       </h1>
-      <p class="text-gray-600">
+      <p class="text-gray-600 my-2">
         ¿Estás listo para construir tu futuro en UniBam?
       </p>
     </div>
@@ -17,7 +17,7 @@
         type="text"
         v-model="searchQuery"
         placeholder="¿Tienes dudas?"
-        class="w-full py-3 px-4 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-black"
+        class="w-full py-3 px-4 border border-gray-300 rounded-full focus:outline-none focus:ring-4 focus:ring-[#ffda00]"
         @keyup.enter="goToFAQ"
       />
       <button
@@ -99,15 +99,18 @@
       </div>
     </div>
   </div>
+
+  <BottomBar class="md:hidden" />
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue'
 import { computed } from 'vue'
 import { gsap } from 'gsap'
-import { useUserStore } from '@/stores/user' // Import Pinia store
-import { useRouter } from 'vue-router' // Import Vue Router
+import { useUserStore } from '@/stores/user'
+import { useRouter } from 'vue-router'
 import NavBar from '@/components/NavBar.vue'
+import BottomBar from '../components/BottomBar.vue'
 
 // Access the user store
 const userStore = useUserStore()
@@ -117,18 +120,15 @@ const fullName = computed(() => `${userStore.firstName} ${userStore.lastName}`)
 const showFAQButton = computed(() => searchQuery.value.length > 0)
 const router = useRouter()
 const goToFAQ = () => {
-  router.push('/about') // Replace '/faq' with the actual route to your FAQ page
+  router.push('/about')
 }
 
-// GSAP Refs for the cards
 const cardsContainer = ref(null)
 const card1 = ref(null)
 const card2 = ref(null)
 const card3 = ref(null)
 
-// GSAP Animation on mounted
 onMounted(() => {
-  // Animate cards fade-in and slide-up on mount
   gsap.from([card1.value, card2.value, card3.value], {
     opacity: 0,
     y: 50,
@@ -138,7 +138,6 @@ onMounted(() => {
   })
 })
 
-// GSAP Hover animation for individual cards
 const onCardHover = (card) => {
   gsap.to(card.value, {
     scale: 1.05,
