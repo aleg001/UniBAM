@@ -2,13 +2,22 @@
 module.exports = {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'amarillo-macondo': '#FFD700',
+        'naranja-alba': '#FF7F3F',
+        'violeta-orquidea': '#9B5DE5',
+        'azul-caribe': '#00BBF9',
+        'verde-andino': '#00F5D4',
+        'rosa-flamenco': '#FF99C8',
+      },
+    },
   },
   plugins: [require('daisyui')],
   daisyui: {
     themes: [
+      'bumblebee', // Changed from 'cupcake' to 'bumblebee'
       {
-        // started from daisy 'lemonade'
         light: {
           primary: '#519903',
           secondary: '#facc15',
@@ -32,19 +41,26 @@ module.exports = {
         },
       },
       {
-        // started from daisy 'night', now to be named, lemonade evening...
         dark: {
-          primary: '#fde047',
-          secondary: '#065f46',
+          primary: '#519903',
+          secondary: '#facc15',
+          'secondary-focus': '#fcd34d',
           accent: '#ffffff',
-          'accent-focus': '#faebd7',
-          neutral: '#fef9c3',
-          'base-100': '#061e11',
-          'base-content': '#fde047',
-          info: '#0284c7',
-          success: '#059669',
-          warning: '#ea580c',
-          error: '#be123c',
+          'accent-focus': '#d9f99d',
+          neutral: '#064e3b',
+          'base-100': '#fef3c7',
+          info: '#C8E1E7',
+          success: '#DEF29F',
+          warning: '#F7E589',
+          error: '#F2B6B5',
+          negro: '#2B292A',
+          blanco: '#FFFFFF',
+          'amarillo-macondo': '#FFD700',
+          'naranja-alba': '#FF7F3F',
+          'violeta-orquidea': '#9B5DE5',
+          'azul-caribe': '#00BBF9',
+          'verde-andino': '#00F5D4',
+          'rosa-flamenco': '#FF99C8',
         },
       },
     ],

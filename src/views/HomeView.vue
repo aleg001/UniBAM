@@ -28,13 +28,13 @@
       <!-- CTA Buttons -->
       <div ref="ctaButtons" class="space-y-4 mt-12">
         <a
-          href="#"
+          href="/login"
           class="block w-full max-w-xs mx-auto bg-yellow-400 text-black py-3 rounded-lg shadow-md text-lg font-medium hover:bg-yellow-500 transition-all"
         >
           Ingresar
         </a>
         <a
-          href="#"
+          href="/register"
           class="block w-full max-w-xs mx-auto text-black py-3 rounded-lg border-2 border-black text-lg font-medium hover:bg-gray-200 transition-all"
         >
           Registrarse
