@@ -22,17 +22,17 @@ jobs:
 
       # Step 3: Install dependencies
       - name: Install dependencies
-        run: npm install  # Installs the necessary dependencies
+        run: npm install
 
       # Step 4: Build the Vue app
       - name: Build Vue app
-        run: npm run build  # Builds the production-ready version of your app
+        run: npm run build  # Builds the Vue3 app
 
       # Step 5: Deploy to Firebase Hosting
       - name: Deploy to Firebase Hosting
-        run: firebase deploy --only hosting  # Deploy only to Firebase Hosting
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}  # Use the stored Firebase token
+        uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          channelId: live  # Deploy to the live channel
-          projectId: unibam-uvg  # Deploy to the Firebase project "unibam-uvg"
+          repoToken: ${{ secrets.GITHUB_TOKEN }}  # GitHub token for commenting on PRs
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_UNIBAM_UVG }}  # Firebase service account secret
+          channelId: live  # Specify the channel as live
+          projectId: unibam-uvg  # Specify your Firebase project ID
