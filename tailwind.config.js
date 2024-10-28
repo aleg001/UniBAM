@@ -25,45 +25,30 @@ export default {
     },
     screens: {
       '2xs': '375px',
-      // => @media (min-width: 375px) { ... }
-
       xs: '450px',
-      // => @media (min-width: 450px) { ... }
-
       sm: '575px',
-      // => @media (min-width: 576px) { ... }
-
       md: '768px',
-      // => @media (min-width: 768px) { ... }
-
       lg: '992px',
-      // => @media (min-width: 992px) { ... }
-
       xl: '1200px',
-      // => @media (min-width: 1200px) { ... }
-
       '2xl': '1400px',
-      // => @media (min-width: 1400px) { ... }
     },
-
     extend: {
+      fontFamily: {
+        sans: ['Poppins', 'sans-serif'], // Add Poppins as default font
+      },
       fontWeight: {
         inherit: 'inherit',
       },
-      // Goto https://javisperez.github.io/tailwindcolorshades to generate colors
       colors: {
         current: 'currentColor',
         transparent: 'transparent',
-
         black: '#000000',
         white: '#ffffff',
-
         'cynical-black': '#171717',
         'granulated-sugar': '#FFFBF2',
         'ancient-stone': '#DDDAD3',
         sassy: '#C48564',
       },
-
       keyframes: {
         slideDown: {
           from: { height: 0 },
@@ -86,6 +71,7 @@ export default {
     },
   },
   plugins: [
+    require('daisyui'),
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
     require('tailwind-scrollbar'),
@@ -98,4 +84,7 @@ export default {
       addVariant('ios', '.ios &')
     }),
   ],
+  daisyui: {
+    themes: ['bumblebee'], // DaisyUI theme
+  },
 }

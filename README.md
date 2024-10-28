@@ -49,6 +49,8 @@ UniBAM/
 ├── nuxt.config.ts      # Configuración de Nuxt 3
 └── package.json        # Dependencias del proyecto y scripts
 
+```
+
 ## Configuración del Proyecto
 
 1. **Entrar al Directorio del Proyecto**  
