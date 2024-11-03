@@ -55,7 +55,7 @@
             d="M5.121 19.879A3 3 0 017 19h10a3 3 0 011.879.879M12 13a5 5 0 100-10 5 5 0 000 10z"
           />
         </svg>
-        <span class="text-xs text-gray-700">Perfil</span>
+        <span class="text-xs text-gray-700">UniBAM</span>
       </button>
     </div>
   </div>
@@ -66,10 +66,9 @@ import { useRouter } from 'vue-router'
 
 const router = useRouter()
 
-const goToHome = () => router.push('/main')
+const goToHome = () => router.push('/help')
 const goToFAQ = () => router.push('/about')
-const goToProfile = () => router.push('/profile')
-const goToSettings = () => router.push('/settings')
+const goToProfile = () => router.push('/main')
 </script>
 
 <style scoped>

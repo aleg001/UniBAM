@@ -3,7 +3,7 @@
     <div class="container mx-auto flex justify-between items-center">
       <!-- Bam Logo -->
 
-      <a href="/main">
+      <a href="/help">
         <img src="../assets/logo.svg" alt="Bam Logo" class="h-16 w-auto mr-3" />
       </a>
       <!-- Hamburger Menu Icon (Mobile) -->
@@ -28,9 +28,14 @@
 
       <!-- Nav Links (Desktop) -->
       <div class="hidden lg:flex space-x-6">
-        <a href="/main" class="text-gray-700 hover:text-black transition-colors"
+        <a href="/help" class="text-gray-700 hover:text-black transition-colors"
           >Página principal</a
         >
+
+        <a href="/main" class="text-gray-700 hover:text-black transition-colors"
+          >UniBAM</a
+        >
+
         <a
           href="/about"
           class="text-gray-700 hover:text-black transition-colors"
@@ -57,9 +62,16 @@
           <ul class="flex flex-col items-center space-y-4 p-4">
             <li>
               <a
-                href="/main"
+                href="/help"
                 class="text-gray-700 hover:text-black transition-colors"
                 >Página Principal</a
+              >
+            </li>
+            <li>
+              <a
+                href="/main"
+                class="text-gray-700 hover:text-black transition-colors"
+                >UniBAM</a
               >
             </li>
             <li>

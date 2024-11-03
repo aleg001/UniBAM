@@ -1,6 +1,6 @@
 <template>
   <NavBar />
-  <div class="min-h-screen bg-white p-4 flex flex-col items-center">
+  <div class="min-h-screen bg-white p-2 flex flex-col items-center">
     <!-- Header Section with Image and Title -->
     <div class="text-center mb-8 mt-32">
       <h1 class="text-2xl md:text-3xl font-bold text-black mb-2">
@@ -209,7 +209,7 @@
       </div>
 
       <!-- Additional FAQs -->
-      <div>
+      <div class="mb-32">
         <button
           class="w-full flex justify-between items-center bg-white border-2 border-blue-400 text-blue-400 p-4 rounded-lg shadow-md bg-blue-50"
           @click="toggleAccordion(6)"

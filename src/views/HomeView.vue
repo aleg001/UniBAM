@@ -1,8 +1,8 @@
 <template>
-  <div class="bg-gray-50 flex items-center justify-center min-h-screen">
+  <div class="bg-gray-50 items-center justify-center min-h-screen">
     <div class="container mx-auto p-4 text-center">
       <!-- Placeholder for the Bam Logo -->
-      <div ref="img" class="mb-8">
+      <div ref="img">
         <img src="../assets/logo.svg" alt="Bam Logo" class="mx-auto h-48" />
       </div>
 

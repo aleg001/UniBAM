@@ -106,7 +106,7 @@ const handleSubmit = () => {
     email: email.value,
     password: password.value,
   })
-  router.push('/main')
+  router.push('/help')
 }
 
 // Navigate back function

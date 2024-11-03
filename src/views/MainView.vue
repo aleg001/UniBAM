@@ -58,7 +58,7 @@
     <div ref="cardsContainer" class="space-y-8 w-full max-w-md mt-5">
       <div
         ref="card1"
-        class="flex items-center bg-blue-400 text-white rounded-xl p-4 shadow-md hover:shadow-xl hover:scale-150"
+        class="flex items-center bg-[#71d6ed] text-black rounded-xl p-4 shadow-md hover:shadow-xl hover:scale-150"
         @mouseenter="onCardHover(card1)"
         @mouseleave="onCardLeave(card1)"
       >
@@ -86,7 +86,7 @@
 
       <div
         ref="card3"
-        class="flex items-center bg-orange-400 text-white rounded-xl p-4 shadow-md hover:shadow-xl"
+        class="flex items-center bg-orange-400 text-black rounded-xl p-4 shadow-md hover:shadow-xl"
         @mouseenter="onCardHover(card3)"
         @mouseleave="onCardLeave(card3)"
       >
