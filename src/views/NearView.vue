@@ -100,32 +100,32 @@ const selectedView = ref('map')
 const locations = ref([
   {
     name: 'Tre Fratelli ',
-    address: 'Ciudad de Guatemala',
+    address: 'Zona 7, CDGT',
     coords: { x: 50, y: 40 },
   },
   {
     name: 'Frisco Grill',
-    address: 'Zona 11',
+    address: 'Zona 11, CDGT',
     coords: { x: 45, y: 45 },
   },
   {
     name: 'Cafe Barista',
-    address: 'Majadas',
+    address: 'Majadas, CDGT',
     coords: { x: 30, y: 60 },
   },
   {
     name: 'GNC',
-    address: 'Zona 2',
+    address: 'Zona 2, CDGT',
     coords: { x: 80, y: 15 },
   },
   {
     name: 'Fitness One',
-    address: 'Zona 10',
+    address: 'Zona 10, CDGT',
     coords: { x: 55, y: 65 },
   },
   {
     name: 'Volaris',
-    address: 'Zona 4',
+    address: 'Zona 4, CDGT',
     coords: { x: 75, y: 55 },
   },
 ])

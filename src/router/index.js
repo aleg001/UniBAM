@@ -64,6 +64,11 @@ const router = createRouter({
       name: 'nearby',
       component: () => import('../views/NearView.vue'),
     },
+    {
+      path: '/challenge',
+      name: 'challenge',
+      component: () => import('../views/RetoBAM.vue'),
+    },
   ],
 })
 

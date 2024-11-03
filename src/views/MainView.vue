@@ -56,33 +56,38 @@
 
     <!-- Benefit Cards -->
     <div ref="cardsContainer" class="space-y-8 w-full max-w-md mt-5">
-      <div
-        ref="card1"
-        class="flex items-center bg-[#71d6ed] text-black rounded-xl p-4 shadow-md hover:shadow-xl hover:scale-150"
-        @mouseenter="onCardHover(card1)"
-        @mouseleave="onCardLeave(card1)"
-      >
-        <img
-          src="../assets/cerca.jpg"
-          alt="Reto UniBam"
-          class="w-20 h-20 rounded-lg object-cover"
-        />
-        <p class="ml-4 text-xl font-bold">Reto UniBam</p>
-      </div>
+      <a href="/challenge" class="block">
+        <div
+          ref="card1"
+          class="flex items-center bg-[#71d6ed] text-black rounded-xl p-4 shadow-md hover:shadow-xl hover:scale-150"
+          @mouseenter="onCardHover(card1)"
+          @mouseleave="onCardLeave(card1)"
+        >
+          <img
+            src="../assets/cerca.jpg"
+            alt="Reto UniBam"
+            class="w-20 h-20 rounded-lg object-cover"
+          />
+          <p class="ml-4 text-xl font-bold">Reto UniBam</p>
+        </div>
+      </a>
 
-      <div
-        ref="card2"
-        class="flex items-center bg-[#ffda00] text-black rounded-xl p-4 shadow-md hover:shadow-xl"
-        @mouseenter="onCardHover(card2)"
-        @mouseleave="onCardLeave(card2)"
-      >
-        <img
-          src="../assets/cuentas.png"
-          alt="Beneficios cerca de mi"
-          class="w-20 h-20 rounded-lg object-cover"
-        />
-        <p class="ml-4 text-xl font-bold">Beneficios cerca de mi</p>
-      </div>
+      <a href="/nearby" class="block">
+        <div
+          ref="card2"
+          class="flex items-center bg-[#ffda00] text-black rounded-xl p-4 shadow-md hover:shadow-xl"
+          @mouseenter="onCardHover(card2)"
+          @mouseleave="onCardLeave(card2)"
+          to="/nearby"
+        >
+          <img
+            src="../assets/cuentas.png"
+            alt="Beneficios cerca de mi"
+            class="w-20 h-20 rounded-lg object-cover"
+          />
+          <p class="ml-4 text-xl font-bold">Beneficios cerca de mi</p>
+        </div>
+      </a>
 
       <div
         ref="card3"
