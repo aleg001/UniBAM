@@ -46,18 +46,26 @@
         <option value="Fit">Fit</option>
         <option value="Foodie">Foodie</option>
       </select>
+
+      <!-- Button to Save Profile Selection -->
+      <button
+        @click="saveProfile"
+        class="w-full bg-black text-white py-3 rounded-lg shadow-md font-medium hover:bg-gray-900 transition-all"
+      >
+        Ir al Reto UniBAM
+      </button>
     </div>
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted, computed } from 'vue'
-import { useProfileStore } from '@/stores/profile'
+import { useUserStore } from '@/stores/user'
 import { gsap } from 'gsap'
 
-// Pinia store
-const profileStore = useProfileStore()
-const profile = ref(profileStore.profileType || 'Gamer')
+// Access Pinia store
+const profileStore = useUserStore()
+const profile = ref(profileStore.profileType)
 
 // Questions and answers
 const questions = ref([
@@ -104,7 +112,6 @@ const nextStep = (type) => {
       { opacity: 1, x: 0, duration: 0.5, ease: 'power3.out' }
     )
   } else {
-    profileStore.setProfileType(type)
     profile.value = type
     showResult.value = true
     gsap.fromTo(
@@ -113,6 +120,12 @@ const nextStep = (type) => {
       { scale: 1, opacity: 1, duration: 0.8, ease: 'elastic.out(1, 0.5)' }
     )
   }
+}
+
+// Save the profile type to the store
+const saveProfile = () => {
+  profileStore.setProfileType(profile.value)
+  window.location.href = '/gauge' // Redirect to the next page after saving
 }
 
 // Color based on profile type
@@ -131,7 +144,7 @@ const profileColor = computed(() => {
 
 // Update profile when dropdown changes
 const updateProfile = () => {
-  profileStore.setProfileType(profile.value)
+  profile.value = profile.value // Trigger v-model update
 }
 
 onMounted(() => {
@@ -147,3 +160,21 @@ onMounted(() => {
   )
 })
 </script>
+
+<style scoped>
+.circle-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.circle-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
+}
+</style>

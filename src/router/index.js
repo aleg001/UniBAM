@@ -69,6 +69,11 @@ const router = createRouter({
       name: 'challenge',
       component: () => import('../views/RetoBAM.vue'),
     },
+    {
+      path: '/gauge',
+      name: 'gauge',
+      component: () => import('../views/GaugeView.vue'),
+    },
   ],
 })
 

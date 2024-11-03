@@ -15,6 +15,7 @@
     "pinia": "^2.0.16",
     "pinia-plugin-persistedstate": "^4.1.2",
     "vue": "^3.2.37",
+    "vue-gauge": "^1.0.3",
     "vue-router": "^4.1.2",
     "vue3-leaflet": "^1.0.50"
   },
