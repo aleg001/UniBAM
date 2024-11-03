@@ -59,6 +59,11 @@ const router = createRouter({
       name: 'terms',
       component: () => import('../views/TermsView.vue'),
     },
+    {
+      path: '/nearby',
+      name: 'nearby',
+      component: () => import('../views/NearView.vue'),
+    },
   ],
 })
 

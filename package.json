@@ -11,10 +11,12 @@
     "@vueuse/core": "^9.1.0",
     "daisyui": "^2.22.0",
     "gsap": "^3.10.4",
+    "ol": "^10.2.1",
     "pinia": "^2.0.16",
     "pinia-plugin-persistedstate": "^4.1.2",
     "vue": "^3.2.37",
-    "vue-router": "^4.1.2"
+    "vue-router": "^4.1.2",
+    "vue3-leaflet": "^1.0.50"
   },
   "devDependencies": {
     "@headlessui/vue": "^1.6.7",

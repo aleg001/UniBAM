@@ -42,14 +42,14 @@
           >Preguntas frecuentes</a
         >
         <a
-          href="/profile"
+          href="/cards"
           class="text-gray-700 hover:text-black transition-colors"
-          >Profile</a
+          >Solicitar Tarjeta</a
         >
         <a
-          href="/settings"
+          href="/terms"
           class="text-gray-700 hover:text-black transition-colors"
-          >Settings</a
+          >Términos y Condiciones</a
         >
       </div>
 
@@ -83,16 +83,16 @@
             </li>
             <li>
               <a
-                href="/profile"
+                href="/cards"
                 class="text-gray-700 hover:text-black transition-colors"
-                >Profile</a
+                >Solicitar Tarjeta</a
               >
             </li>
             <li>
               <a
-                href="/settings"
+                href="/terms"
                 class="text-gray-700 hover:text-black transition-colors"
-                >Settings</a
+                >Términos y Condiciones</a
               >
             </li>
           </ul>
