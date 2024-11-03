@@ -32,7 +32,7 @@
       </a>
 
       <!-- Card Application Button -->
-      <a href="/about">
+      <a href="/cards">
         <div class="option flex flex-col items-center" ref="application">
           <button
             class="w-16 h-16 flex items-center justify-center rounded-full bg-white shadow-lg hover:shadow-xl transition transform hover:-translate-y-1"
@@ -49,60 +49,68 @@
       </a>
 
       <!-- UniBAM Button -->
-      <div class="option flex flex-col items-center" ref="unibam">
-        <button
-          class="w-16 h-16 flex items-center justify-center rounded-full bg-white shadow-lg hover:shadow-xl transition transform hover:-translate-y-1"
-        >
-          <img
-            src="https://www.bancolombia.com/wcm/connect/www.bancolombia.com-26918/e3c3783d-050e-4ee0-a2a7-bd0ae277d8a7/BB_multicolor_conoce_nuestra_app.png?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_K9HC1202P86O40QTNS9EAE1S47-e3c3783d-050e-4ee0-a2a7-bd0ae277d8a7-nELd9On"
-            alt=""
-          />
-        </button>
-        <p class="mt-2 text-black text-sm font-semibold">UniBAM</p>
-      </div>
+      <a href="/main">
+        <div class="option flex flex-col items-center" ref="unibam">
+          <button
+            class="w-16 h-16 flex items-center justify-center rounded-full bg-white shadow-lg hover:shadow-xl transition transform hover:-translate-y-1"
+          >
+            <img
+              src="https://www.bancolombia.com/wcm/connect/www.bancolombia.com-26918/e3c3783d-050e-4ee0-a2a7-bd0ae277d8a7/BB_multicolor_conoce_nuestra_app.png?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_K9HC1202P86O40QTNS9EAE1S47-e3c3783d-050e-4ee0-a2a7-bd0ae277d8a7-nELd9On"
+              alt=""
+            />
+          </button>
+          <p class="mt-2 text-black text-sm font-semibold">UniBAM</p>
+        </div>
+      </a>
 
       <!-- Video Tutorials Button -->
-      <div class="option flex flex-col items-center" ref="tutorials">
-        <button
-          class="w-16 h-16 flex items-center justify-center rounded-full bg-white shadow-lg hover:shadow-xl transition transform hover:-translate-y-1"
-        >
-          <img
-            src="https://images.ctfassets.net/d8tspqmagn8z/PMzgxFmcdzRSTbtpSgXOi/f21d0f5b8ebb4e90a8a514fbaeafb1bb/pic-megaphone.svg"
-            alt=""
-          />
-        </button>
-        <p class="mt-2 text-black text-sm font-semibold">
-          Educación Financiera
-        </p>
-      </div>
+      <a href="/education">
+        <div class="option flex flex-col items-center" ref="tutorials">
+          <button
+            class="w-16 h-16 flex items-center justify-center rounded-full bg-white shadow-lg hover:shadow-xl transition transform hover:-translate-y-1"
+          >
+            <img
+              src="https://images.ctfassets.net/d8tspqmagn8z/PMzgxFmcdzRSTbtpSgXOi/f21d0f5b8ebb4e90a8a514fbaeafb1bb/pic-megaphone.svg"
+              alt=""
+            />
+          </button>
+          <p class="mt-2 text-black text-sm font-semibold">
+            Educación Financiera
+          </p>
+        </div>
+      </a>
 
-      <!-- Terms and Conditions Button -->
-      <div class="option flex flex-col items-center" ref="terms">
-        <button
-          class="w-16 h-16 flex items-center justify-center rounded-full bg-white shadow-lg hover:shadow-xl transition transform hover:-translate-y-1"
-        >
-          <img
-            src="https://www.bancolombia.com/wcm/connect/www.bancolombia.com-26918/fecf86a2-46a3-4d85-be63-b1392ba9f107/BB_multicolor_descripcio%CC%81n+1.svg?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_K9HC1202P86O40QTNS9EAE1S47-fecf86a2-46a3-4d85-be63-b1392ba9f107-nwlN6Vg"
-            alt=""
-          />
-        </button>
-        <p class="mt-2 text-black text-sm font-semibold">
-          Términos y condiciones
-        </p>
-      </div>
+      <a href="/terms">
+        <!-- Terms and Conditions Button -->
+        <div class="option flex flex-col items-center" ref="terms">
+          <button
+            class="w-16 h-16 flex items-center justify-center rounded-full bg-white shadow-lg hover:shadow-xl transition transform hover:-translate-y-1"
+          >
+            <img
+              src="https://www.bancolombia.com/wcm/connect/www.bancolombia.com-26918/fecf86a2-46a3-4d85-be63-b1392ba9f107/BB_multicolor_descripcio%CC%81n+1.svg?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_K9HC1202P86O40QTNS9EAE1S47-fecf86a2-46a3-4d85-be63-b1392ba9f107-nwlN6Vg"
+              alt=""
+            />
+          </button>
+          <p class="mt-2 text-black text-sm font-semibold">
+            Términos y condiciones
+          </p>
+        </div>
+      </a>
 
-      <!-- Security Tips Button -->
-      <div class="option flex flex-col items-center" ref="tips">
-        <button
-          class="w-16 h-16 flex items-center justify-center rounded-full bg-white shadow-lg hover:shadow-xl transition transform hover:-translate-y-1"
-        >
-          <img
-            src="https://www.bancolombia.com/wcm/connect/www.bancolombia.com-26918/5bdccb95-fea4-4c2e-9ff4-4b4818fff6c4/idea.png?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_K9HC1202P86O40QTNS9EAE1S47-5bdccb95-fea4-4c2e-9ff4-4b4818fff6c4-nyDUz1M"
-            alt=""
-          />
-        </button>
-        <p class="mt-2 text-black text-sm font-semibold">Tips de seguridad</p>
-      </div>
+      <a href="/security">
+        <!-- Security Tips Button -->
+        <div class="option flex flex-col items-center" ref="tips">
+          <button
+            class="w-16 h-16 flex items-center justify-center rounded-full bg-white shadow-lg hover:shadow-xl transition transform hover:-translate-y-1"
+          >
+            <img
+              src="https://www.bancolombia.com/wcm/connect/www.bancolombia.com-26918/5bdccb95-fea4-4c2e-9ff4-4b4818fff6c4/idea.png?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_K9HC1202P86O40QTNS9EAE1S47-5bdccb95-fea4-4c2e-9ff4-4b4818fff6c4-nyDUz1M"
+              alt=""
+            />
+          </button>
+          <p class="mt-2 text-black text-sm font-semibold">Tips de seguridad</p>
+        </div>
+      </a>
     </div>
 
     <!-- Bottom Animated Color Bars -->

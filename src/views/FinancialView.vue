@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen bg-white text-gray-700 p-6 space-y-10">
     <!-- Header with Animated Color Bars -->
-    <div class="w-full flex flex-col items-center space-y-2 my-5">
+    <div class="w-full flex flex-col items-center space-y-2 my-5 mt-32">
       <h1 class="text-4xl font-bold text-gray-800 mb-4">
         Educación Financiera
       </h1>
