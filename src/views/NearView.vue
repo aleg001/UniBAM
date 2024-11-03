@@ -85,6 +85,14 @@
         </button>
       </div>
     </div>
+    <div class="flex items-center">
+      <button
+        @click="$router.push('/main')"
+        class="!mb-12 bg-black text-white py-3 px-8 rounded-lg shadow-md font-medium hover:bg-gray-900 transition-all"
+      >
+        Regresar
+      </button>
+    </div>
   </div>
 </template>
 

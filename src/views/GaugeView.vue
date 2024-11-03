@@ -1,6 +1,6 @@
 <template>
   <div
-    class="min-h-screen bg-gray-50 flex flex-col items-center p-6 space-y-8 text-center"
+    class="min-h-screen bg-gray-50 flex flex-col items-center p-6 space-y-8 text-center mb-12"
   >
     <h1 class="text-3xl font-bold text-gray-800 mt-32">Reto UniBAM</h1>
     <p
@@ -13,101 +13,110 @@
 
     <div class="w-full max-w-md space-y-6">
       <!-- First Goal Card (Monetary Goal) -->
-      <div
-        class="goal-card flex flex-col items-center bg-white rounded-lg shadow-lg p-6 space-y-4"
-      >
-        <div class="flex items-center space-x-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6 text-gray-600"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M5 13l4 4L19 7"
-            />
-          </svg>
-          <p class="text-lg font-semibold">Tu meta</p>
-        </div>
-        <p class="text-2xl font-bold text-gray-800">Q5,000</p>
-        <div class="relative h-32 w-32 mx-auto">
-          <svg class="gauge" viewBox="0 0 36 36">
-            <path
-              class="circle-bg"
-              d="M18 2.0845a 15.9155 15.9155 0 1 1 0 31.831a 15.9155 15.9155 0 1 1 0-31.831"
-            />
-            <path
-              :style="{
-                stroke: profileColor,
-                strokeDashoffset: 100 - gauge1Percentage,
-              }"
-              ref="gauge1"
-              class="circle"
-              d="M18
+      <a href="/prizes" class="block">
+        <div
+          class="goal-card flex flex-col items-center bg-white rounded-lg shadow-lg p-6 space-y-4"
+        >
+          <div class="flex items-center space-x-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 text-gray-600"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 13l4 4L19 7"
+              />
+            </svg>
+            <p class="text-lg font-semibold">Tu meta</p>
+          </div>
+          <p class="text-2xl font-bold text-gray-800">Q5,000</p>
+          <div class="relative h-32 w-32 mx-auto">
+            <svg class="gauge" viewBox="0 0 36 36">
+              <path
+                class="circle-bg"
+                d="M18 2.0845a 15.9155 15.9155 0 1 1 0 31.831a 15.9155 15.9155 0 1 1 0-31.831"
+              />
+              <path
+                :style="{
+                  stroke: profileColor,
+                  strokeDashoffset: 100 - gauge1Percentage,
+                }"
+                ref="gauge1"
+                class="circle"
+                d="M18
               2.0845a 15.9155 15.9155 0 1 1 0 31.831a 15.9155 15.9155 0 1 1
               0-31.831"
-            />
-          </svg>
-          <span
-            class="absolute inset-0 flex items-center justify-center text-xl font-bold text-gray-700"
-          >
-            15%
-          </span>
+              />
+            </svg>
+            <span
+              class="absolute inset-0 flex items-center justify-center text-xl font-bold text-gray-700"
+            >
+              15%
+            </span>
+          </div>
+          <p class="text-gray-600">{{ firstGoalMessage }}</p>
         </div>
-        <p class="text-gray-600">{{ firstGoalMessage }}</p>
-      </div>
+      </a>
+      <a href="/prizes" class="block">
+        <!-- Second Goal Card (Purchase Goal) -->
+        <div
+          class="goal-card flex flex-col items-center bg-white rounded-lg shadow-lg p-6 space-y-4"
+        >
+          <div class="flex items-center space-x-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 text-gray-600"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 13l4 4L19 7"
+              />
+            </svg>
+            <p class="text-lg font-semibold">Tu meta</p>
+          </div>
+          <p class="text-2xl font-bold text-gray-800">10 compras</p>
+          <div class="relative h-32 w-32 mx-auto">
+            <svg class="gauge" viewBox="0 0 36 36">
+              <path
+                class="circle-bg"
+                d="M18 2.0845a 15.9155 15.9155 0 1 1 0 31.831a 15.9155 15.9155 0 1 1 0-31.831"
+              />
 
-      <!-- Second Goal Card (Purchase Goal) -->
-      <div
-        class="!mb-16 goal-card flex flex-col items-center bg-white rounded-lg shadow-lg p-6 space-y-4"
+              <path
+                :style="{
+                  stroke: profileColor,
+                  strokeDashoffset: 100 - gauge2Percentage,
+                }"
+                ref="gauge2"
+                class="circle"
+                d="M18 2.0845a 15.9155 15.9155 0 1 1 0 31.831a 15.9155 15.9155 0 1 1 0-31.831"
+              />
+            </svg>
+            <span
+              class="absolute inset-0 flex items-center justify-center text-xl font-bold text-gray-700"
+            >
+              50%
+            </span>
+          </div>
+          <p class="text-gray-600">{{ secondGoalMessage }}</p>
+        </div>
+      </a>
+      <button
+        @click="$router.push('/main')"
+        class="!mb-8 bg-black text-white py-3 px-8 rounded-lg shadow-md font-medium hover:bg-gray-900 transition-all"
       >
-        <div class="flex items-center space-x-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6 text-gray-600"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M5 13l4 4L19 7"
-            />
-          </svg>
-          <p class="text-lg font-semibold">Tu meta</p>
-        </div>
-        <p class="text-2xl font-bold text-gray-800">10 compras</p>
-        <div class="relative h-32 w-32 mx-auto">
-          <svg class="gauge" viewBox="0 0 36 36">
-            <path
-              class="circle-bg"
-              d="M18 2.0845a 15.9155 15.9155 0 1 1 0 31.831a 15.9155 15.9155 0 1 1 0-31.831"
-            />
-
-            <path
-              :style="{
-                stroke: profileColor,
-                strokeDashoffset: 100 - gauge2Percentage,
-              }"
-              ref="gauge2"
-              class="circle"
-              d="M18 2.0845a 15.9155 15.9155 0 1 1 0 31.831a 15.9155 15.9155 0 1 1 0-31.831"
-            />
-          </svg>
-          <span
-            class="absolute inset-0 flex items-center justify-center text-xl font-bold text-gray-700"
-          >
-            50%
-          </span>
-        </div>
-        <p class="text-gray-600">{{ secondGoalMessage }}</p>
-      </div>
+        Regresar
+      </button>
     </div>
   </div>
 </template>

@@ -100,7 +100,7 @@
           alt="Premios"
           class="w-20 h-20 rounded-lg object-cover"
         />
-        <p class="ml-4 text-xl font-bold">Premios</p>
+        <p class="ml-4 text-xl font-bold">Sorteos UniBAM</p>
       </div>
     </div>
   </div>

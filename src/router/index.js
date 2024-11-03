@@ -74,6 +74,11 @@ const router = createRouter({
       name: 'gauge',
       component: () => import('../views/GaugeView.vue'),
     },
+    {
+      path: '/prizes',
+      name: 'prizes',
+      component: () => import('../views/PrizesView.vue'),
+    },
   ],
 })
 
