@@ -85,7 +85,7 @@
         </button>
       </div>
     </div>
-    <div class="flex items-center">
+    <div class="flex justify-center space-x-4 mt-4">
       <button
         @click="$router.push('/main')"
         class="!mb-12 bg-black text-white py-3 px-8 rounded-lg shadow-md font-medium hover:bg-gray-900 transition-all"

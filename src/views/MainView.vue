@@ -89,19 +89,21 @@
         </div>
       </a>
 
-      <div
-        ref="card3"
-        class="flex items-center bg-orange-400 text-black rounded-xl p-4 shadow-md hover:shadow-xl"
-        @mouseenter="onCardHover(card3)"
-        @mouseleave="onCardLeave(card3)"
-      >
-        <img
-          src="../assets/premio.png"
-          alt="Premios"
-          class="w-20 h-20 rounded-lg object-cover"
-        />
-        <p class="ml-4 text-xl font-bold">Sorteos UniBAM</p>
-      </div>
+      <a href="/giveaways" class="block">
+        <div
+          ref="card3"
+          class="flex items-center bg-orange-400 text-black rounded-xl p-4 shadow-md hover:shadow-xl"
+          @mouseenter="onCardHover(card3)"
+          @mouseleave="onCardLeave(card3)"
+        >
+          <img
+            src="../assets/premio.png"
+            alt="Premios"
+            class="w-20 h-20 rounded-lg object-cover"
+          />
+          <p class="ml-4 text-xl font-bold">Sorteos UniBAM</p>
+        </div>
+      </a>
     </div>
   </div>
 
