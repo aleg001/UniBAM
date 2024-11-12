@@ -84,6 +84,11 @@ const router = createRouter({
       name: 'giveaways',
       component: () => import('../views/GiveawayView.vue'),
     },
+    {
+      path: '/aprobada',
+      name: 'aprobada',
+      component: () => import('../views/SuccessCard.vue'),
+    },
   ],
 })
 
