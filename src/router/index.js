@@ -89,6 +89,11 @@ const router = createRouter({
       name: 'aprobada',
       component: () => import('../views/SuccessCard.vue'),
     },
+    {
+      path: '/solicitar-tarjeta',
+      name: 'solicitar-tarjeta',
+      component: () => import('../views/GetCard.vue'),
+    },
   ],
 })
 

@@ -21,10 +21,7 @@
         </h2>
         <p class="text-black mt-2">
           Visita el
-          <a
-            href="https://www.bam.com.gt/leads/tarjeta-credito/"
-            target="_blank"
-            class="text-blue-800 underline"
+          <a href="/solicitar-tarjeta" class="text-blue-800 underline"
             >sitio web de BAM</a
           >
           y completa el formulario de solicitud en línea.
