@@ -7,7 +7,7 @@
     <h1 class="text-4xl font-bold text-gray-800 mb-6 mt-24">
       Solicita tu Tarjeta UniBAM
     </h1>
-    <p class="text-black max-w-lg mb-8">
+    <p class="text-black max-w-lg mb-8 md:hidden">
       Sigue estos pasos sencillos para obtener tu tarjeta de crédito BAM en
       línea.
     </p>
